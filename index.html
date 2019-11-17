@@ -4,40 +4,46 @@
 <head>
     <title>Page Title</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <h1> Library </h1>
 
 
-    <div class="calculator">
-        <div id="displayAbove"></div>
-        <div id="display"></div>
+    <div class="table"> 
 
-
-
-
-        <button value="7" type="button" class="buttons">7</button>
-        <button value="8" type="button" class="buttons">8</button>
-        <button value="9" type="button" class="buttons">9</button>
-        <button value="/" type="button" class="buttons">/</button>
-
-        <button value="4" type="button" class="buttons">4</button>
-        <button value="5" type="button" class="buttons">5</button>
-        <button value="6" type="button" class="buttons">6</button>
-        <button value="x" type="button" class="buttons">x</button>
-
-        <button value="1" type="button" class="buttons">1</button>
-        <button value="2" type="button" class="buttons">2</button>
-        <button value="3" type="button" class="buttons">3</button>
-        <button value="-" type="button" class="buttons">-</button>
-
-        <button value="0" type="button" class="buttons">0</button>
-        <button value="=" type="button" class="buttons">=</button>
-        <button value="AC" type="button" class="buttons">AC</button>
-        <button value="+" type="button" class="buttons">+</button>
 
     </div>
+
+
+    <button class="open-button" onclick="openForm()">Add Book</button>
+
+    <div class="form-popup" id="myForm">
+            <form id="formId"class="form-container">
+              <h1>Add new book</h1>
+          
+              <label for="title"><b>Title</b></label>
+              <input type="text" placeholder="Enter title" name="title" id="titleId" required>
+          
+              <label for="Author"><b>Author</b></label>
+              <input type="text" placeholder="Enter Author" name="author" id="author"required>
+
+              <label for="title"><b>Number of pages</b></label>
+              <input type="number" placeholder="Enter number of pages" name="pages" required>
+              Have you read the book?
+              <br>
+              <label for="Read"><b>Yes</b></label>
+              <input type="radio" placeholder="Have you read the book?" name="read" value="Yes"> 
+              <label for="Read"><b>No</b></label>
+              <input type="radio" placeholder="Have you read the book?" name="read" value="No"> 
+
+
+          
+              <button type="submit" class="btn">Add</button>
+              <button type="button" onclick="closeForm()" id="submitButton">Close</button>
+            </form>
+          </div>
+
 
 
 
