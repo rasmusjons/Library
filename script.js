@@ -5,11 +5,29 @@ let table2 = document.querySelector(".table");
 let i = 0; 
 
 
-let bookA = new Book("Harry Potter 1", "JK Rowling", 100, "Yes");
-let bookB = new Book("Harry Potter 2", "JK Rowling", 200, "Yes");
-let bookC = new Book("Harry Potter 3", "JK Rowling", 300, "No");
-let bookD = new Book("Harry Potter 4", "JK Rowling", 400, "Yes");
-let bookE = new Book("Harry Potter 5", "JK Rowling", 500, "Yes");
+class ClassBook {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read; 
+  }
+ 
+ 
+}
+
+
+
+
+let bookA = new ClassBook ("Harry Potter 1", "JK Rowling", 100, "Yes");
+let bookB = new ClassBook ("Harry Potter 2", "JK Rowling", 200, "Yes");
+let bookC = new ClassBook ("Harry Potter 3", "JK Rowling", 300, "No");
+let bookD = new ClassBook ("Harry Potter 4", "JK Rowling", 400, "Yes");
+let bookE = new ClassBook ("Harry Potter 5", "JK Rowling", 500, "Yes");
+
+function addBookToLibrary(Book){
+    myLibrary.push(Book); 
+  }
 
 addBookToLibrary(bookA);
 addBookToLibrary(bookB);
@@ -17,28 +35,12 @@ addBookToLibrary(bookC);
 addBookToLibrary(bookD);
 addBookToLibrary(bookE);
 
+console.log(bookA)
+
 
 displayBooks();
 
 
-
-
-//constructor 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-
-}
-
-
-//lägger till böckerna i array 
-
-function addBookToLibrary(aBook) {
-  myLibrary.push(aBook)
-
-}
 
 
 addForm()
@@ -59,7 +61,7 @@ addForm.addEventListener("submit", function (e) {
 
   let read = addForm.querySelector('input[name="read"]');
   let readValue = read.value;
-let bookNew = new Book(titleValue, authorValue, pagesValue, readValue);
+let bookNew = new ClassBook(titleValue, authorValue, pagesValue, readValue);
       myLibrary.push(bookNew);
 
 
