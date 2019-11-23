@@ -41,9 +41,11 @@ function addBookToLibrary(aBook) {
 }
 
 
-
+addForm()
 //pop-up form. 
-const addForm = document.forms["formId"];
+
+function addForm(){
+  const addForm = document.forms["formId"];
 addForm.addEventListener("submit", function (e) {
   e.preventDefault();
   let title = addForm.querySelector('input[name="title"]')
@@ -57,10 +59,7 @@ addForm.addEventListener("submit", function (e) {
 
   let read = addForm.querySelector('input[name="read"]');
   let readValue = read.value;
-
-        
-              //skapar lägger till boken i array 
-      let bookNew = new Book(titleValue, authorValue, pagesValue, readValue);
+let bookNew = new Book(titleValue, authorValue, pagesValue, readValue);
       myLibrary.push(bookNew);
 
 
@@ -82,11 +81,17 @@ addForm.addEventListener("submit", function (e) {
 
 
       closeForm();
+    
+
+
+        
+              //skapar lägger till boken i array 
+      
 
 
 
 });
-
+}
 
 
 
@@ -158,6 +163,8 @@ function readStatus(i){
 }
 
 
+
+//De nya knapparna som adderades behövde tydligen egna eventlistners. Detta är functionen för de. 
 function listenerForNewButtons (element){
 
   element.addEventListener("click", function () {

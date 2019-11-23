@@ -7,8 +7,9 @@
 </head>
 
 <body>
+    <div class="banner"> 
     <h1> Library </h1>
-
+     </div>
 
     <div class="table"> 
 
@@ -20,8 +21,7 @@
 
     <div class="form-popup" id="myForm">
             <form id="formId"class="form-container">
-              <h1>Add new book</h1>
-          
+                
               <label for="title"><b>Title</b></label>
               <input type="text" placeholder="Enter title" name="title" id="titleId" required>
           
@@ -30,17 +30,17 @@
 
               <label for="title"><b>Number of pages</b></label>
               <input type="number" placeholder="Enter number of pages" name="pages" required>
-              Have you read the book?
+               <b>Have you read the book?</b>
               <br>
               <label for="Read"><b>Yes</b></label>
-              <input type="radio" placeholder="Have you read the book?" name="read" value="Yes"> 
+              <input type="radio"  name="read" value="Yes"> 
               <label for="Read"><b>No</b></label>
-              <input type="radio" placeholder="Have you read the book?" name="read" value="No"> 
+              <input type="radio" name="read" value="No"> 
 
 
           
               <button type="submit" class="btn">Add</button>
-              <button type="button" onclick="closeForm()" id="submitButton">Close</button>
+              <button type="button"  class="btn" onclick="closeForm()" id="submitButton">Close</button>
             </form>
           </div>
 

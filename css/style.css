@@ -1,15 +1,30 @@
-body{
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  
+  font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
- 
+.banner {
+  background: rgb(4, 161, 201);
+  margin: 0; 
+  margin-bottom: 17px;
+}
+
+.banner h1 {
+color: white; 
+margin: 0; 
+height: 62px; 
+padding-top: 20px; 
+
+}
+
+body {
+  margin: 0; 
 }
 
 
-.button {
-  width: 100px; 
-  height: 100px; 
- 
-}
+
 
 h1{
  color: rgb(4, 161, 201);
@@ -18,22 +33,33 @@ h1{
 }
 
 .table {
+
   margin: auto; 
   width: 500px; 
-  border: solid 2px rgb(4, 161, 201);
+  border: 3px solid rgba(4, 162, 201, 0.2);
  }
 
+
+li {
+  display: inline-block;
+  width: 350px; 
+  
+}
+
+/*BUTTONS--------*/
+
 .readButtons {
-  border: solid 2px rgb(4, 161, 201);
+  border: 3px solid rgba(4, 162, 201, 0.2);
   color: white;; 
   background-color: white;
   color: black;
-  padding: 16px 20px;
   cursor: pointer;
   text-align: center;
   width: 70px; 
-  height: 45px; 
-display: flex;
+  height: 30px; 
+  display: flex;
+  display: inline;
+  margin-top: 10px;
 }
 
 .readButtons:hover {
@@ -41,12 +67,11 @@ display: flex;
   color: white; 
 }
 
-
-li {
-  display:table;
+.button {
+  width: 100px; 
+  height: 100px; 
+ 
 }
-
-
 
 
 /* Button used to open the contact form - fixed at the bottom of the page */
@@ -63,16 +88,33 @@ li {
   right: 28px;
   width: 280px;
   margin: auto; 
+  margin-top: 17px;
+  margin-bottom: 17px;
 }
+
+
+/*BUTTONS-----END------------*/
+
+
 
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
-
   bottom: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
   z-index: 9;
+}
+
+#formId{
+  margin: auto;
+}
+
+
+#myForm{
+  width: 500px;
+  margin: auto;  
+  border: 3px solid rgba(4, 162, 201, 0.2);
 }
 
 /* Add styles to the form container */
@@ -88,12 +130,13 @@ li {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  color: black;
+  border: 3px solid rgba(4, 162, 201, 0.2);
 }
 
 
 .form-container input[type = radio]{
-  width: 100%;
+  width: 20%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -110,7 +153,7 @@ li {
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: rgb(160, 134, 185);
+  background-color: rgb(4, 161, 201);
   color: white;
   padding: 16px 20px;
   border: none;
